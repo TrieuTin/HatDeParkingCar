@@ -1,0 +1,50 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+
+.utmp/
+.vscode/
+obj/
+[Pp]ackages
+TQ01.00_BurstDebugInformation_DoNotShip/
+[Mm]emoryCaptures/
+Obj/
+
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store
+Thumbs.db
+
+# ==================== #
+# Visual Studio / Rider#
+# ==================== #
+.vs/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+
+# =========== #
+# Other stuff #
+# =========== #
+*.apk
+*.aab
+*.unitypackage
+
+# ============== #
+# Auto-generated #
+# ============== #
+.crash/
+sysinfo.txt
