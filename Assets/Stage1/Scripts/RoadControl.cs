@@ -9,10 +9,7 @@ public class RoadControl : MonoBehaviour
     public float speed = 5f;
 
 
-    public float maxTurnAngle = 60f;
-    public float turnSpeed = 5f;
-    public bool turnRight = true;
-    private bool isTouching = false;
+   
 
     private List<GameObject> instantRoad = new List<GameObject>();
     private void Awake()
@@ -41,19 +38,7 @@ public class RoadControl : MonoBehaviour
             }
         }
 
-        if (Input.touchCount > 0) isTouching = true;
-        else if (Input.touchCount == 0) isTouching = false;
-
-        if (isTouching)
-        {
-            //di chuyen phia truoc mot doan
-            transform.Translate(Vector3.forward * speed * Time.deltaTime);
-            //tinh toan goc xoay
-            float turnStep = turnSpeed * Time.deltaTime;
-            // xoay khi di chuyen
-            float dir = turnRight ? 1f : -1f;
-            transform.Rotate(Vector3.up * dir * turnSpeed * Time.deltaTime);
-        }
+       
     }
 
     void Spawn(float zPos)
@@ -63,11 +48,11 @@ public class RoadControl : MonoBehaviour
 
         instantRoad.Add(newRoad);
 
-        Debug.Log("LEN:" + instantRoad[instantRoad.Count - 1].GetComponent<Collider>().bounds.size.z);
+        
 
         roadLength = instantRoad[instantRoad.Count - 1].GetComponent<Collider>().bounds.size.z ;
 
-        Debug.Log("roadLen " + roadLength);
+       
     }
 
     void SpawnNext()
